@@ -12,7 +12,7 @@ import wind_icon from '../asset/wind.png';
 
 
 const WeatherApp = () => {
-  const api_key='01f47a91472691c6e97adcafe0c45836';
+  const api_key=process.env.REACT_APP_WEATHER_API_KEY;
   const search = async() => {
     const element = document.getElementsByClassName("cityInput")
     if(element[0].value ==="")
@@ -31,7 +31,7 @@ const WeatherApp = () => {
     humidity[0].innerHTML = data.main.humidity;
     wind[0].innerHTML = data.wind.speed;
     tempreature[0].innerHTML = data.main.temp;
-    location[0].innerHTML = data.name
+    location[0].innerHTML = data.name;
   };
   return (
     <div className='container'>
