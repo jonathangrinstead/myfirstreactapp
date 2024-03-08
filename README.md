@@ -1,1 +1,1 @@
-Basic Weather App Create in React
+Basic Weather App Created in React
